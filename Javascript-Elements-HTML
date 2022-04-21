@@ -1,0 +1,78 @@
+//CHALLENGE 1: ELEMENTS BY ID:
+//Using the HTML code provided below:
+ // 1. Create an empty variable, `elm`
+  //2. Find an element with the ID `info`
+  //3. Set `elm` to the variable that you found
+  //4. Alert the inner text of the element with `alert` function, it should alert the text "JavaScript on The DOM"
+
+//HTML Code to work with:
+<p id="intro">
+  Hello World!
+</p>
+
+<p id="info">
+  JavaScript on The DOM
+</p>
+
+//My answer:
+var elm = ""
+elm = document.getElementById("info");
+
+alert(elm.innerText)
+
+//CHALLENGE 2: ELEMENTS BY TAG NAME:
+//Using the HTML Code Below:
+//	1. Create an empty variable, `elm`
+//	2. Find a paragraph by its tag name
+//  3. Set `elm` to the variable that you found
+//  4. Alert the inner text of the element with `alert` function, it should alert the text "JavaScript on The DOM" or "Hello World!"
+
+//HTML Code to start with:
+<p id="intro">
+  Hello World!
+</p>
+
+<p id="info">
+  JavaScript on The DOM
+</p>
+
+//My Answer: 
+//var elm = "";
+elm = document.getElementsByTagName("p")[0];
+alert(elm.innerText);
+
+//Comments: Because more than one item in the HTML code can have the same tag (unlike the element ID which is unique), we need to tell the code WHICH tag to look at. This is why the array number is ESSENTIAL in order to tell the code which tag to look at! If you want it to analyze both/multiple tags you can, but you need to then use a loop to loop through all the arrays and return all the different tags. 
+
+//CHALLENGE 3: ELEMENTS BY CLASS NAME
+//Using the HTML Code Below:
+// 1. Create an empty array, `names`
+// 2. Find all the paragraph elements using `getElementsByClassName`
+// 3. For each element found
+// Add the element's text to the array of names
+// 4. Alert the final result
+
+//HTML Code to Start With:
+<h2>
+  List of People:
+</h2>
+
+<ul class='people'>
+  <li class='name'>
+    Clara
+  </li>
+  <li class='name'>
+    James
+  </li>
+  <li class='name'>
+    Sara
+  </li>
+</ul>
+
+//My Answer:
+let names = [];
+items = document.getElementsByClassName('name');
+for(let item of items){
+    names.push(item.innerText)
+}
+
+alert(names);
